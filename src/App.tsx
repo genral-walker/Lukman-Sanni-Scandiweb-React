@@ -4,7 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path={ROUTES.HOME} element={<h1>Home</h1>} />
         <Route path={ROUTES.PRODUCT} element={<h1>product</h1>} />
