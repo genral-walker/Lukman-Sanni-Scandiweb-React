@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { desktopFirstResponsiveness } from 'utils/styles';
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -13,6 +14,7 @@ body {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
   padding: 0 65px;
+    ${desktopFirstResponsiveness(730, { padding: '0 30px' })}
   /* overflow: hidden; */
   /* font-family: 'Roboto', sans-serif; */
 }
