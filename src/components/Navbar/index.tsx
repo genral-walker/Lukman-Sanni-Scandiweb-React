@@ -7,18 +7,35 @@ import { ROUTES } from 'constants/routes';
 
 interface NavbarState {
   currency: '$' | '€' | '¥';
+  popupCartOpen: boolean;
 }
 
 export default class Navbar extends Component<any, NavbarState> {
   constructor(props: any) {
     super(props);
+
     this.state = {
       currency: '$',
+      popupCartOpen: false,
     };
+
+    this.updateCart = this.updateCart.bind(this);
+    this.handleCartClickType = this.handleCartClickType.bind(this);
+  }
+
+  updateCart() {
+    console.log('walker');
+  }
+
+  handleCartClickType(evt: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    const elem = evt.target as HTMLElement;
+    elem.id === 'popup-cart'
+      ? this.updateCart()
+      : this.setState((state, _) => ({ popupCartOpen: !state.popupCartOpen }));
   }
 
   render() {
-    const { currency } = this.state;
+    const { currency, popupCartOpen } = this.state;
 
     return (
       <NavbarWrapper>
@@ -47,10 +64,17 @@ export default class Navbar extends Component<any, NavbarState> {
             <option value="¥">¥ JPY</option>
           </select>
 
-          <div>
+          <div onClick={this.handleCartClickType}>
             <CartLogo /> <span>3</span>
+            {popupCartOpen && <div id="popup-cart"></div>}
           </div>
         </div>
+        {popupCartOpen && (
+          <span
+            className="blur"
+            onClick={() => this.setState({ popupCartOpen: false })}
+          ></span>
+        )}
       </NavbarWrapper>
     );
   }

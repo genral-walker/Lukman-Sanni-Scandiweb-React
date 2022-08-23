@@ -1,10 +1,9 @@
 import { css, CSSObject } from 'styled-components';
 
-export const desktopFirstResponsiveness = (
-  screen: number,
-  styles: CSSObject
-) => css`
-  @media only screen and (max-width: ${screen}px) {
-    ${styles}
-  }
-`;
+export function desktopFirstResponsiveness(screen: number, styles: CSSObject) {
+  return css`
+    @media only screen and (max-width: ${screen}px) {
+      ${styles}
+    }
+  `;
+}

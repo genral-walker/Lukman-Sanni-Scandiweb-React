@@ -69,6 +69,15 @@ export const NavbarWrapper = styled.nav`
           place-items: center;
           padding-bottom: 3px;
         }
+        #popup-cart {
+          background-color: white;
+          padding: 25px 10px;
+          position: absolute;
+          border: 1px solid red;
+          right: -17px;
+          top: 160%;
+          z-index: 900;
+        }
       }
     }
   }
@@ -79,5 +88,17 @@ export const NavbarWrapper = styled.nav`
     ${desktopFirstResponsiveness(1150, { marginLeft: '-70px' })}
     ${desktopFirstResponsiveness(950, { marginLeft: '-50px' })}
     ${desktopFirstResponsiveness(600, { margin: '-5px 0 0 -5px' })}
+  }
+
+  .blur {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 800;
+      top: 0;
+      left: 0;
+      background-color: rgba(57, 55, 72, 0.22);
+      margin-top: 60.3px;
+    
   }
 `;
