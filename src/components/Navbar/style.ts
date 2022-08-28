@@ -86,15 +86,19 @@ export const NavbarWrapper = styled.nav`
           right: -17px;
           top: 160%;
           z-index: 900;
+          width: max-content;
 
           h3 {
             font-weight: normal;
             font-size: 15px;
-            margin-bottom: 10px;
           }
 
           .cart-info {
-           margin-top: 20px;
+            margin-top: 35px;
+            display: flex;
+            & > div:first-child {
+              margin-right: 23px;
+            }
           }
         }
       }

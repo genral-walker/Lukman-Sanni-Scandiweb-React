@@ -36,6 +36,7 @@ option {
   border: none;
   background-color: inherit;
   cursor: pointer;
+  font-family: inherit;
   &:active,
   &:focus {
     border: none;
