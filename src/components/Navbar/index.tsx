@@ -4,6 +4,7 @@ import { ReactComponent as PageLogo } from 'assets/icons/page-logo.svg';
 import { ReactComponent as CartLogo } from 'assets/icons/cart.svg';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
+import { CartDetailBox, CartImageBox } from 'components';
 
 interface NavbarState {
   currency: '$' | '€' | '¥';
@@ -29,9 +30,13 @@ export default class Navbar extends Component<any, NavbarState> {
 
   handleCartClickType(evt: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     const elem = evt.target as HTMLElement;
-    elem.id === 'popup-cart'
-      ? this.updateCart()
-      : this.setState((state, _) => ({ popupCartOpen: !state.popupCartOpen }));
+    // elem.id === 'popup-cart'
+    //   ? this.updateCart()
+    //   : this.setState((state, _) => ({ popupCartOpen: !state.popupCartOpen }));
+
+    if (elem.id === 'cart-quantity') {
+      this.setState((state, _) => ({ popupCartOpen: !state.popupCartOpen }));
+    }
   }
 
   render() {
@@ -65,8 +70,28 @@ export default class Navbar extends Component<any, NavbarState> {
           </select>
 
           <div onClick={this.handleCartClickType}>
-            <CartLogo /> <span>3</span>
-            {popupCartOpen && <div id="popup-cart"></div>}
+            <CartLogo />
+            <span id="cart-quantity">3</span>
+            {/* If no cart item  do not display the above. Also disable the handleCartClick */}
+            {popupCartOpen && (
+              <div id="popup-cart">
+                <h3>
+                  <b>My Bags.</b> 3 items
+                </h3>
+
+                <div className="cart-info">
+                  <CartDetailBox
+                    title="Apollo"
+                    description="Running Short"
+                    price="$50.00"
+                    colors={['red', 'brown', 'blue']}
+                    sizes={['XS', 'S', 'M', 'L']}
+                    type="pop-over-cart"
+                  />
+                  <CartImageBox />
+                </div>
+              </div>
+            )}
           </div>
         </div>
         {popupCartOpen && (

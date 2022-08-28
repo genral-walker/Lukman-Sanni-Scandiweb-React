@@ -48,15 +48,16 @@ export const NavbarWrapper = styled.nav`
 
       div {
         position: relative;
-        cursor: pointer;
         svg {
-          width: 18px;
+          cursor: pointer;
+          width: 19px;
           margin-left: 10px;
           transform: translateY(-2px);
           z-index: 2;
         }
         & > span {
           position: absolute;
+          cursor: pointer;
           right: -7px;
           top: -5px;
           height: 14px;
@@ -68,15 +69,33 @@ export const NavbarWrapper = styled.nav`
           display: grid;
           place-items: center;
           padding-bottom: 3px;
+          &::after {
+            content: '';
+            position: absolute;
+            height: 27px;
+            width: 32px;
+            top: -1px;
+            right: -2px;
+            border-radius: 15px;
+          }
         }
         #popup-cart {
           background-color: white;
-          padding: 25px 10px;
+          padding: 25px 13px;
           position: absolute;
-          border: 1px solid red;
           right: -17px;
           top: 160%;
           z-index: 900;
+
+          h3 {
+            font-weight: normal;
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+
+          .cart-info {
+           margin-top: 20px;
+          }
         }
       }
     }
@@ -91,14 +110,14 @@ export const NavbarWrapper = styled.nav`
   }
 
   .blur {
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      z-index: 800;
-      top: 0;
-      left: 0;
-      background-color: rgba(57, 55, 72, 0.22);
-      margin-top: 60.3px;
-    
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 800;
+    top: 0;
+    left: 0;
+    background-color: rgba(57, 55, 72, 0.22);
+    margin-top: 60.3px;
+    opacity: 0.5;
   }
 `;
