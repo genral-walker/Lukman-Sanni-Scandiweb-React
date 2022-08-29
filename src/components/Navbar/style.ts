@@ -79,6 +79,11 @@ export const NavbarWrapper = styled.nav`
             border-radius: 15px;
           }
         }
+        .cart-main {
+          max-height: 370px;
+          overflow-y: auto;
+          margin-top: 15px;
+        }
         #popup-cart {
           background-color: white;
           padding: 25px 13px;
@@ -89,15 +94,47 @@ export const NavbarWrapper = styled.nav`
           width: max-content;
 
           h3 {
-            font-weight: normal;
+            font-weight: 500;
             font-size: 15px;
           }
 
           .cart-info {
-            margin-top: 35px;
+            &:first-of-type {
+              margin-top: 22px !important;
+            }
+            margin-top: 37px;
             display: flex;
             & > div:first-child {
               margin-right: 23px;
+            }
+          }
+
+          h4 {
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            margin: 22px 0;
+            span:last-of-type {
+              font-weight: 700;
+            }
+          }
+
+          .btn-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+              font-size: 13px;
+              font-weight: 600;
+              font-family: inherit;
+              border: 1px solid black;
+              flex-basis: 48.3%;
+              padding: 10px 0;
+              &:last-of-type {
+                color: white;
+                background: #5ece7b;
+                border: none;
+              }
             }
           }
         }

@@ -79,16 +79,39 @@ export default class Navbar extends Component<any, NavbarState> {
                   <b>My Bags.</b> 3 items
                 </h3>
 
-                <div className="cart-info">
-                  <CartDetailBox
-                    title="Apollo"
-                    description="Running Short"
-                    price="$50.00"
-                    colors={['red', 'brown', 'blue']}
-                    sizes={['XS', 'S', 'M', 'L']}
-                    type="pop-over-cart"
-                  />
-                  <CartImageBox />
+                <div className="cart-main">
+                  <div className="cart-info">
+                    <CartDetailBox
+                      title="Apollo"
+                      description="Running Short"
+                      price="$50.00"
+                      colors={['red', 'brown', 'blue']}
+                      sizes={['XS', 'S', 'M', 'L']}
+                      type="pop-over-cart"
+                    />
+                    <CartImageBox />
+                  </div>
+                  <div className="cart-info">
+                    <CartDetailBox
+                      title="Apollo"
+                      description="Running Short"
+                      price="$50.00"
+                      colors={['red', 'brown', 'blue']}
+                      sizes={['XS', 'S', 'M', 'L']}
+                      type="pop-over-cart"
+                    />
+                    <CartImageBox />
+                  </div>
+                </div>
+
+                <h4>
+                  <span>Total</span>
+                  <span>$200.00</span>
+                </h4>
+
+                <div className="btn-wrapper">
+                  <button>VIEW BAG</button>
+                  <button>CHECK OUT</button>
                 </div>
               </div>
             )}
