@@ -13,9 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
-  padding: 0 65px;
-  padding-top: 60px;
-    ${desktopFirstResponsiveness(730, { padding: '60px 30px' })}
+  padding: 60px 65px 90px;
+    ${desktopFirstResponsiveness(730, { padding: '60px 30px 70px' })}
   /* overflow: hidden; */
   /* font-family: 'Roboto', sans-serif; */
 }

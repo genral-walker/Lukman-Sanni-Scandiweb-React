@@ -15,6 +15,67 @@ export default class ProductListings extends Component {
             price="$50.00"
             outOfStock
           />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+            outOfStock
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+            outOfStock
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+            outOfStock
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+            outOfStock
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+            outOfStock
+          />
+           <ProductPreview
+            image={require('assets/preview.jpg')}
+            description="Apollo Running Short"
+            price="$50.00"
+            outOfStock
+          />
         </div>
       </ListingsWrapper>
     );
