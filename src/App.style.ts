@@ -14,7 +14,8 @@ body {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
   padding: 0 65px;
-    ${desktopFirstResponsiveness(730, { padding: '0 30px' })}
+  padding-top: 60px;
+    ${desktopFirstResponsiveness(730, { padding: '60px 30px' })}
   /* overflow: hidden; */
   /* font-family: 'Roboto', sans-serif; */
 }

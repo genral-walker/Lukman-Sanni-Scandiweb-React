@@ -3,6 +3,7 @@ import { ROUTES } from 'constants/routes';
 import { Component } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from 'App.style';
+import { CartPage, ProductListingsPage, ProductPage } from 'pages';
 
 export default class App extends Component {
   render() {
@@ -12,9 +13,9 @@ export default class App extends Component {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path={ROUTES.HOME} element={<h1></h1>} />
-            <Route path={ROUTES.PRODUCT} element={<h1>product</h1>} />
-            <Route path={ROUTES.CART} element={<h1>Cart</h1>} />
+            <Route path={ROUTES.HOME} element={<ProductListingsPage />} />
+            <Route path={ROUTES.PRODUCT} element={<ProductPage />} />
+            <Route path={ROUTES.CART} element={<CartPage />} />
             <Route path="*" element={<Navigate to={ROUTES.HOME} />} />
           </Routes>
         </BrowserRouter>

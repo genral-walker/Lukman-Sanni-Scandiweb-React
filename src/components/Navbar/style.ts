@@ -86,7 +86,7 @@ export const NavbarWrapper = styled.nav`
         }
         #popup-cart {
           background-color: white;
-          padding: 25px 13px;
+          padding: 25px 13px 28px;
           position: absolute;
           right: -17px;
           top: 160%;
